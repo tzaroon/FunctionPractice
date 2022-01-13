@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "DemoCICD:HttpTrigger1/__init__.main (python3.6)",
+      "invokeTarget": {
+        "target": "code",
+        "projectRoot": "${workspaceFolder}/",
+        "lambdaHandler": "HttpTrigger1/__init__.main"
+      },
+      "lambda": {
+        "runtime": "python3.6",
+        "payload": {},
+        "environmentVariables": {}
+      }
+    },
+    {
+      "name": "Attach to Python Functions",
+      "type": "python",
+      "request": "attach",
+      "port": 9091,
+      "preLaunchTask": "func: host start"
+    }
+  ]
+}
